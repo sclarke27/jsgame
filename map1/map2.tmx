@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="isometric" width="20" height="20" tilewidth="80" tileheight="40">
+ <tileset firstgid="1" name="water-tile1" tilewidth="80" tileheight="80">
+  <image source="water-tile1.png" trans="ffffff" width="160" height="160"/>
+ </tileset>
+ <tileset firstgid="5" name="grass" tilewidth="80" tileheight="80">
+  <image source="grass-tile.png" trans="ffffff" width="160" height="160"/>
+ </tileset>
+ <layer name="ground" width="20" height="20">
+  <data encoding="base64" compression="zlib">
+   eJxjYmBgYBrFgx6zYsHUNIsSM0H6OLBgSs1jR8Iw89ioZB47FcyDhRmyWeSah47ZKDAPF6a2eaN4FAMAsRwD9A==
+  </data>
+ </layer>
+ <layer name="layer1" width="20" height="20">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo4BywI6EB6N5o2AUjALqAwCluAAr
+  </data>
+ </layer>
+ <layer name="Tile Layer 3" width="20" height="20">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFIw1wADE7Fc1jpaJZo2AUjIKhAwBahAAV
+  </data>
+ </layer>
+ <layer name="Tile Layer 4" width="20" height="20">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFgx2wD7QDRsEoGAWjAAsAACaEAAg=
+  </data>
+ </layer>
+ <layer name="Tile Layer 5" width="20" height="20">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgF1ATsA+2AUTAKRsEooBMAACjQAAg=
+  </data>
+ </layer>
+ <layer name="Tile Layer 6" width="20" height="20">
+  <data encoding="base64" compression="zlib">
+   eJxjYBi5gGOgHTDAgHWgHTAKRsEoGNIAAEW0AA4=
+  </data>
+ </layer>
+</map>

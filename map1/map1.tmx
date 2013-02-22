@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="isometric" width="20" height="20" tilewidth="65" tileheight="32">
+ <tileset firstgid="1" name="BlockExample" tilewidth="65" tileheight="65">
+  <image source="C:/Users/scott/Documents/BlockExample.png" trans="ffffff" width="257" height="257"/>
+ </tileset>
+ <tileset firstgid="10" name="BlockExample" tilewidth="64" tileheight="65">
+  <image source="C:/Users/scott/Documents/BlockExample.png" trans="ffffff" width="257" height="257"/>
+ </tileset>
+ <layer name="Tile Layer 1" width="20" height="20">
+  <data encoding="base64" compression="zlib">
+   eJzjZWBg4B3FIw5zIWFqmsUKxSJQTIl5IHM4oZgS83ixmAczk1z/YzOPlQrmoWNKzONCM4fS+OaikjmjePhgALrXE6c=
+  </data>
+ </layer>
+</map>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="32" height="24" tilewidth="20" tileheight="20">
+ <tileset firstgid="1" source="basic 4 square.tsx"/>
+ <tileset firstgid="5" source="water.tsx"/>
+ <tileset firstgid="9" source="greens.tsx"/>
+ <tileset firstgid="13" source="debug colors.tsx"/>
+ <tileset firstgid="17" source="newSky.tsx"/>
+ <tileset firstgid="42" source="clouds.tsx"/>
+ <layer name="skyLayer" width="32" height="24">
+  <properties>
+   <property name="layerType" value="background"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJztw6ERACAMBMFvgYggMBj6b5EyTuR2ZitJGbvgDT/wC3/wbdu2x/2Xc0Wh
+  </data>
+ </layer>
+ <layer name="background layer" width="32" height="24">
+  <properties>
+   <property name="layerType" value="background"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUjIKRCTjprA8dcJNhFieZ+qhhFrJ6argBZAYPiXp4yNSHDTAykOd/UvXhs58c/5OjD5f99NQ32OxnoRBTavYoGAUDCQC2PQGY
+  </data>
+ </layer>
+ <layer name="charater layer" width="32" height="24">
+  <properties>
+   <property name="layerType" value="character"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJztwQEBAAAAgiD/r25IQAEAAC8GDAAAAQ==
+  </data>
+ </layer>
+ <layer name="foregroundLayer" width="32" height="24">
+  <properties>
+   <property name="layerType" value="foreground"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUjIJRMBgB5wCaBVLPTSU3kGoWsnpK3UCuWTxQ9TwU2E2uWTC3MjJQz/+kmsUD1UMt/5NjFiMV7KbELGraj8t8SjETFkwNc+lhPzOVMLLd1DJzJGAAnKgC4w==
+  </data>
+ </layer>
+ <layer name="collisionLayer" width="32" height="24" visible="0">
+  <properties>
+   <property name="layerType" value="collision"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJzjZWBg4B1gPFBg1P5R+0ftH7V/1P5R+0ftH7n206rtQuu2Dz4z6BW2+OynB8DmT3qnq8HUpiUVAABBsAVj
+  </data>
+ </layer>
+ <layer name="Tile Layer 6" width="32" height="24">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgF1ADCQCwCxaIDZK8kFNPLDSC7JZDshdkNouWhapSBWIVG9ssi2Y/sf3kkNRpArEkj+2FuEEHC8viVj4JRMApGwSgYBaNgFAw4AADQnANs
+  </data>
+ </layer>
+</map>

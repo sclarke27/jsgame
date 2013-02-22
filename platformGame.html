@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+		<META HTTP-EQUIV="Expires" CONTENT="-1">		
+		<title>Platform Game</title>
+		<style>
+			* {
+				padding: 0px;
+				margin: 0px;
+			}
+			body {
+				background: #a9e4f7; /* Old browsers */
+				background: -moz-linear-gradient(top,  #a9e4f7 0%, #0fb4e7 100%); /* FF3.6+ */
+				background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#a9e4f7), color-stop(100%,#0fb4e7)); /* Chrome,Safari4+ */
+				background: -webkit-linear-gradient(top,  #a9e4f7 0%,#0fb4e7 100%); /* Chrome10+,Safari5.1+ */
+				background: -o-linear-gradient(top,  #a9e4f7 0%,#0fb4e7 100%); /* Opera 11.10+ */
+				background: -ms-linear-gradient(top,  #a9e4f7 0%,#0fb4e7 100%); /* IE10+ */
+				background: linear-gradient(top,  #a9e4f7 0%,#0fb4e7 100%); /* W3C */
+				filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a9e4f7', endColorstr='#0fb4e7',GradientType=0 ); /* IE6-9 */
+
+			}
+			canvas {
+				position: absolute;
+			}
+			
+			#insideFrame {
+				position: relative;
+				margin: 10px auto;
+				width: 640px;
+				height: 480px;
+				box-shadow: 0px 0px 15px rgba(0,0,0,.5);
+				background-color: #fff;
+				border: solid 1px rgba(0,0,0,.7);
+			}
+			
+			#gameLayer canvas {
+				-webkit-transform: translate3d(0, 0, 0);
+			}
+			
+			#gameLayer, #uiLayer, #backgroundLayer, #outsideFrame {
+				position: absolute;
+				top: 0px;
+				left: 0px;
+				width: 100%;
+				height: 100%;
+			}
+			
+			#uiLayer, #backgroundLayer {
+				overflow:: hidden;
+			}
+			
+			#gameLayer {
+				overflow: auto;
+			}
+			
+			#uiLayer { 
+				height: 95%;
+			}
+			
+			#backgroundLayer {
+				
+			}
+			
+			#touchScreenRightControls, #touchScreenLeftControls {
+				position: fixed;
+				bottom: 0px;
+				width: 200px;
+				height: 200px;
+				border: solid 0px black;
+				display: none;
+			}
+			
+			#touchScreenLeftControls {
+				left: 0px;
+			}
+			
+			#touchScreenRightControls {
+				right: 0px;
+			}
+			
+			.touchButton {
+				position: absolute;
+				width: 50px;
+				height: 50px;
+			}
+		</style>
+		<script type="text/javascript" src="lib/rpc.js"></script>
+		<script type="text/javascript" src="javascript/namespaces.js"></script>
+		<script type="text/javascript" src="javascript/Sprite.js"></script>
+		<script type="text/javascript" src="javascript/Character.js"></script>
+		<script type="text/javascript" src="javascript/CharacterList.js"></script>
+		<script type="text/javascript" src="javascript/EventManager.js"></script>
+		<script type="text/javascript" src="javascript/MapManager.js"></script>
+		<script type="text/javascript" src="javascript/CanvasManager.js"></script>
+		<script type="text/javascript" src="javascript/ScreenManager.js"></script>
+		<script type="text/javascript" src="javascript/CollisionManager.js"></script>
+		<script type="text/javascript" src="javascript/DebugPanel.js"></script>
+		<script type="text/javascript" src="javascript/GameCore.js"></script>
+		<script>
+			function initGame() {
+				platformGame.gCoreManager.Init();
+			}
+		</script>
+    </head>
+    <body onLoad="initGame()">
+		<div id="outsideFrame">
+			<div id="insideFrame">
+				<div id="backgroundLayer"></div>
+				<div id="gameLayer"></div>
+				<div id="uiLayer">
+					<div class="tools" style="font-family:">
+						<input type="button" value="small map" onClick="platformGame.gCoreManager.ShowMap(0);">
+						<input type="button" value="test map 2" onClick="platformGame.gCoreManager.ShowMap(2);">
+						<input type="button" value="large map" onClick="platformGame.gCoreManager.ShowMap(1);">
+					</div>
+					
+				
+				
+				</div>
+			</div>
+			<div id="touchScreenLeftControls">
+				<div class="touchButton" style="top: 0px; left: 75px;">
+					<input type="image" src="maps2/touch-button1.png" 
+						onTouchStart="arguments[0].preventDefault();platformGame.gCoreManager.ToggleBirdMovement(true, 'up', platformGame.gCoreManager.mMoveDistance*2);"
+						onTouchEnd="platformGame.gCoreManager.ToggleBirdMovement(false);">
+				</div>
+				<div class="touchButton" style="top: 75px; left: 0px; -webkit-transform: rotate(270deg);">
+					<input type="image" src="maps2/touch-button1.png" 
+						onTouchStart="arguments[0].preventDefault();platformGame.gCoreManager.ToggleBirdMovement(true, 'left', platformGame.gCoreManager.mMoveDistance*2);"
+						onTouchEnd="platformGame.gCoreManager.ToggleBirdMovement(false);">
+				</div>
+				
+				<div class="touchButton" style="top: 75px; left: 150px; -webkit-transform: rotate(90deg);">
+					<input type="image" src="maps2/touch-button1.png" 
+						onTouchStart="arguments[0].preventDefault();platformGame.gCoreManager.ToggleBirdMovement(true, 'right', platformGame.gCoreManager.mMoveDistance*2);"
+						onTouchEnd="platformGame.gCoreManager.ToggleBirdMovement(false);">
+				</div>
+				<div class="touchButton" style="top: 150px; left: 75px; -webkit-transform: rotate(180deg);">
+					<input type="image" src="maps2/touch-button1.png" 
+						onTouchStart="arguments[0].preventDefault();platformGame.gCoreManager.ToggleBirdMovement(true, 'down', platformGame.gCoreManager.mMoveDistance*2);"
+						onTouchEnd="platformGame.gCoreManager.ToggleBirdMovement(false);">
+				</div>
+			
+			</div>
+			<div id="touchScreenRightControls"></div>
+		</div>
+    </body>
+	<script>
+		
+	</script>
+</html>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="isometric" width="20" height="20" tilewidth="80" tileheight="40">
+ <tileset firstgid="1" name="water" tilewidth="80" tileheight="80">
+  <image source="water-tile1.png" trans="ffffff" width="240" height="160"/>
+ </tileset>
+ <tileset firstgid="7" name="grass" tilewidth="80" tileheight="80">
+  <image source="grass-tile.png" trans="ffffff" width="240" height="160"/>
+ </tileset>
+ <tileset firstgid="13" name="stone" tilewidth="80" tileheight="80">
+  <image source="stone-tile.png" trans="ffffff" width="240" height="160"/>
+ </tileset>
+ <tileset firstgid="19" name="water" tilewidth="80" tileheight="80">
+  <image source="water-tile1.png" trans="ffffff" width="240" height="160"/>
+ </tileset>
+ <tileset firstgid="25" name="stone2" tilewidth="80" tileheight="80">
+  <image source="stone-tile.png" trans="ffffff" width="240" height="160"/>
+ </tileset>
+ <tileset firstgid="31" name="w3" tilewidth="80" tileheight="80">
+  <image source="grass-tile.png" trans="ffffff" width="240" height="160"/>
+ </tileset>
+ <layer name="Tile Layer 1" width="20" height="20">
+  <data encoding="base64" compression="zlib">
+   eJxjZmBgYB5iWAIJU8MsRShWoNBMkF5OKGYHYmUKzIS5iwOIuYFYAAkLAjEvmeYpQN0GMocPCZNqHrKZyjjME6XAPF4smFTzYGYqQLEilC+KhClNg5SYMYpH8VDHAFcvCR0=
+  </data>
+ </layer>
+ <layer name="Tile Layer 2" width="20" height="20">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgF1AaCQMwLxHxUMk+ASubQyrxRMApGwcgEAGy7AE0=
+  </data>
+ </layer>
+ <layer name="Tile Layer 3" width="20" height="20" visible="0">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFgxnwDbQDRgHRQGigHTAKRgGdAQB8KAAh
+  </data>
+ </layer>
+</map>
