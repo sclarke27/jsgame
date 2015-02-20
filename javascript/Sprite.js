@@ -19,7 +19,7 @@ platformGame.Sprite = function (imgSrc, width, height, offsetX, offsetY, frames,
     this.SetFrames(frames);
     this.SetDuration(duration);
     this.mFrameTime = 0;
-    
+	
     var date = new Date();
     
     if(this.mDuration > 0 && this.mFrames > 0) {

@@ -31,6 +31,7 @@ platformGame.cCoreManager = function () {
     //maps
     this.mMaps = ['maps2/testMap1.json', 'maps2/longMap1.json', 'maps2/testMap2.json', ]
     this.mMapList = new Array(this.mMaps.length);
+	this.mUrlSubPath = "/jsgmae/"
     
     //misc game values
     this.mGameIsPaused = false;

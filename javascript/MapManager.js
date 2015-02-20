@@ -14,6 +14,7 @@ platformGame.cMapManager = function () {
 }
 
 platformGame.cMapManager.prototype.LoadMap = function (mapSrc) {
+	
     var thisObj = this;
     var requestData = {
         "url" : mapSrc,
@@ -27,7 +28,12 @@ platformGame.cMapManager.prototype.LoadMap = function (mapSrc) {
             console.debug('map not found');
         }
     };
-    window.rpc.Request(requestData);    
+    window.rpc.Request(requestData);
+    
+	/*
+	console.debug(mapSrc)
+    this.ParseMapData([JSON.parse(localStorage[mapSrc])]);
+    */
 }
 
 platformGame.cMapManager.prototype.HideMap = function(){
@@ -40,6 +46,7 @@ platformGame.cMapManager.prototype.HideMap = function(){
 }
 
 platformGame.cMapManager.prototype.ParseMapData = function (jsonData) {
+	console.debug(jsonData);
     this.mRawData = jsonData[0];
     this.mRawLayers = this.mRawData.layers;
     this.mTotalLayers = this.mRawLayers.length;
@@ -74,14 +81,14 @@ platformGame.cMapManager.prototype.ParseMapData = function (jsonData) {
     var tileLen = this.mRawTiles.length
     while(i<tileLen) {
         var currRawTile = this.mRawTiles[i];
-        var totalTileProps = currRawTile.tileproperties.length;
-        for(var prop in currRawTile.tileproperties) {
-            offsets = currRawTile.tileproperties[prop].coords.split(',')
-            currRawTile.offsetx = offsets[1];
-            currRawTile.offsety = offsets[0];
+        var totalTileProps = currRawTile.properties.length;
+        //for(var prop in currRawTile.properties) {
+        //    offsets = currRawTile.properties[prop].coords.split(',')
+        //    currRawTile.offsetx = offsets[1];
+        //    currRawTile.offsety = offsets[0];
             this.mTileList[x] = new platformGame.cMapTile(currRawTile);
             x++
-        }
+        //}
         i++;
     }
     
@@ -106,7 +113,7 @@ platformGame.cMapManager.prototype.DisplayMap = function (targetCanvas) {
  */
 platformGame.cMapTile = function (tileData, offsetX, offsetY) {
     this.mRawData = tileData;
-    this.mImgSrc = this.mRawData.image;
+    this.mImgSrc = "lawn_maps/" + this.mRawData.image;
     this.mImgMargin = this.mRawData.margin;
     this.mName = this.mRawData.name;
     this.mProperties = this.mRawData.properties;
@@ -119,7 +126,8 @@ platformGame.cMapTile = function (tileData, offsetX, offsetY) {
     this.isVisible = this.mRawData.isvisible || true;
 	this.mImgObj = new Image();
     if (this.mImgSrc) {
-        this.mImgObj.src = "maps2/" + this.mImgSrc;
+        this.mImgObj.src = this.mImgSrc;
+		
     }
     this.mImgWidth = this.mImgObj.width || this.mTileWidth;
     this.mImgHeight = this.mImgObj.height || this.mTileHeight;
@@ -185,6 +193,7 @@ platformGame.cMapLayer.prototype.LoadLayerMap = function () {
 }
 
 platformGame.cMapLayer.prototype.BuildLayerCanvas = function(targetDomObj){
+	console.debug(this)
     var x = 0;
     var y = 0;
     var i = 0;

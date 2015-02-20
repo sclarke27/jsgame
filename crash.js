@@ -1,16 +1,3 @@
-/**
- * 
-
-function collision(c1, c2) {
-  var dx = c1.x - c2.x;
-  var dy = c1.y - c2.y;
-  var dist = c1.radius + c2.radius;
- 
-  return (dx * dx + dy * dy <= dist * dist)
-}
-
- */
-
 var mouseCir = {};
 var docWidth = 0;
 var docHeight = 0;
