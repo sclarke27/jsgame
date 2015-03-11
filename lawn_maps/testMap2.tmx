@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="100" height="22" tilewidth="20" tileheight="20">
+ <tileset firstgid="1" source="greens.tsx"/>
+ <tileset firstgid="5" source="basic 4 square.tsx"/>
+ <tileset firstgid="9" source="debug colors.tsx"/>
+ <tileset firstgid="13" source="water.tsx"/>
+ <tileset firstgid="17" source="whites.tsx"/>
+ <layer name="sky" width="100" height="22">
+  <properties>
+   <property name="layerType" value="sky"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJztw8EJADAIBLBbwOL+07qAj74lgVSSUtetqqqHP1VVVVXVzwPWmH0B
+  </data>
+ </layer>
+ <layer name="background" width="100" height="22">
+  <properties>
+   <property name="layerType" value="background"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJztU9EKwzAIzEtJnrv//9cxSEDE6GnSlg6FY10avdOzpWT8U3w6Mp6Pnw9nx6ekNzvDM8tx95wgPVmL6J7PfMlvJR479vzO+bcbOKKxS9tb9rwRPMFtvd+hjeZH57+igedqtVZ6XtVo8aJ3UK5oRPIb+W3Kf4kn4onE49WrcSLaUN27/EBrSNq9/ezii+av3kH5vDHyqqOG5YNWi7736LvaD0ubh3t25+hA9KIzQr4Lq1YFeCxOz/6MGkiPM20ePzjP8KF2HMX2Bp0RMn+rFtUz9CG81ANttrNeNV18ZpYGKZfn8zOOo8je1KLrsHRJtQ/jHNHINc2e6Zm2i7N5S7rojCp7pnlaD1qfaB4aK7xefTPsrBnJvapvzimFtPN36Ens28VEIpFIJBKJt+ILw5khlQ==
+  </data>
+ </layer>
+ <layer name="player layer (no tiles!!!)" width="100" height="22">
+  <properties>
+   <property name="layerType" value="character"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJztwYEAAAAAw6D5U5/gBlUBAAAAAAAAAMA3ImAAAQ==
+  </data>
+ </layer>
+ <layer name="foreground layer" width="100" height="22">
+  <properties>
+   <property name="layerType" value="foreground"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJztk80KgCAQBhch1rO9/7tG4EIX0fWnwGZgbhnyDYrAjpxZGGPGhvc/UvYU2owwsqGdSQVp4mfGhqUuvBU/Mzdk/3HYEAAAAErEry/wE0LDN1Ho8QZBfD1ospYg9SbWQYUmK7EOKm1NrAes49mjhi6+y65Ep9pxBts9EBERO7wASf0PGQ==
+  </data>
+ </layer>
+ <layer name="collisionLayer" width="100" height="22" visible="0">
+  <properties>
+   <property name="layerType" value="collision"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJztwzEJAAAMA7C+9W+4KnYMEkgCAAAAAAAAd6qqvj/zpBGV
+  </data>
+ </layer>
+</map>

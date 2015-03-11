@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="300" height="40" tilewidth="20" tileheight="20">
+ <tileset firstgid="1" name="basic" tilewidth="20" tileheight="20">
+  <image source="basic4square.png" trans="ffffff" width="40" height="40"/>
+  <tile id="0">
+   <properties>
+    <property name="coords" value="0,0"/>
+   </properties>
+  </tile>
+  <tile id="1">
+   <properties>
+    <property name="coords" value="0,1"/>
+   </properties>
+  </tile>
+  <tile id="2">
+   <properties>
+    <property name="coords" value="1,0"/>
+   </properties>
+  </tile>
+  <tile id="3">
+   <properties>
+    <property name="coords" value="1,1"/>
+   </properties>
+  </tile>
+ </tileset>
+ <tileset firstgid="5" name="debug" tilewidth="20" tileheight="20">
+  <image source="basic-4-square-debug.png" trans="ffffff" width="40" height="40"/>
+  <tile id="0">
+   <properties>
+    <property name="coords" value="0,0"/>
+   </properties>
+  </tile>
+  <tile id="1">
+   <properties>
+    <property name="coords" value="0,1"/>
+   </properties>
+  </tile>
+  <tile id="2">
+   <properties>
+    <property name="coords" value="1,0"/>
+   </properties>
+  </tile>
+  <tile id="3">
+   <properties>
+    <property name="coords" value="1,1"/>
+   </properties>
+  </tile>
+ </tileset>
+ <tileset firstgid="9" name="lg blue grad" tilewidth="40" tileheight="40">
+  <image source="bluegrads.png" trans="00ff00" width="80" height="40"/>
+  <tile id="0">
+   <properties>
+    <property name="coords" value="0,0"/>
+   </properties>
+  </tile>
+  <tile id="1">
+   <properties>
+    <property name="coords" value="0,1"/>
+   </properties>
+  </tile>
+ </tileset>
+ <tileset firstgid="11" name="sky/water" tilewidth="20" tileheight="20">
+  <image source="basic-4-square-sky.png" trans="00ff00" width="40" height="40"/>
+  <tile id="0">
+   <properties>
+    <property name="coords" value="0,0"/>
+   </properties>
+  </tile>
+  <tile id="1">
+   <properties>
+    <property name="coords" value="0,1"/>
+   </properties>
+  </tile>
+  <tile id="2">
+   <properties>
+    <property name="coords" value="1,0"/>
+   </properties>
+  </tile>
+  <tile id="3">
+   <properties>
+    <property name="coords" value="1,1"/>
+   </properties>
+  </tile>
+ </tileset>
+ <layer name="Tile Layer 1" width="300" height="40">
+  <data encoding="base64" compression="zlib">
+   eJzt2sFuglAQhlEUFia1ff/HbRc1IQa4YIWZKWdxNjc1/l3cLxi9dl133dntgPcAeAe9AqrQKyCbuS5tPQc4wlSD1p4BHK3VIq0CMrqNRG8BmHObEL0JOLe5Lm09B4iiS0AlWgVkt9Qn7QKyeO6R318BGW1pk2YB2egSUIVeAVXoFQDA/zck2ACwhl4BFQydXgE16BWcU6V7P0yI3gQcp9qd1ys4p4r3/rG3L7gdeF21Xk19HqyyHXhdpXv/vLOfOMu8H/ibavd9qVnR24D9LD2rRG9r7Z17voreCOyvT7Bhi3GzorcAr5t6zmg9e7Tu/dLrLz/uDZdf7/w/+xW7gXzmvjPb26NDXw2Pv4vaCeRxCba2VwDRPhqi9wGMaRVQxeeM6F1ALn0i41ZFbwEAAAAgh2/PqWPm
+  </data>
+ </layer>
+</map>
